@@ -7,7 +7,7 @@ import os
 from services.retrieval_service.retrieval import RetrievalEngine
 
 # ============================================
-# إعدادات Sampling - عدّليها هون إذا بدك تغيّري العدد
+# إعدادات Sampling 
 # ============================================
 SAMPLE_SIZE = 1000          # عدد الـ queries يلي رح تُختبر (من أصل 10,000)
 RANDOM_SEED = 42           # ثابت عشان النتيجة تتكرر لو شغلتي الكود مرة ثانية

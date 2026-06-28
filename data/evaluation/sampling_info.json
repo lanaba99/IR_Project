@@ -1,0 +1,6 @@
+{
+  "sample_size": 1000,
+  "random_seed": 42,
+  "top_k": 10,
+  "note": "Evaluation conducted on a random sample of queries from the official BEIR/Quora test set due to computational constraints. Indexing was performed on the complete corpus (522K documents) without any reduction."
+}

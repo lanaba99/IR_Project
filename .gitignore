@@ -1,22 +1,15 @@
-# Python
-__pycache__/
-*.pyc
-
 # Virtual env
 venv/
 .venv/
 env/
 
 # Data & models
-data/
+data/index/
 models/
 outputs/
 *.db
-*.csv
 *.npz
 *.pkl.gz
-*.joblib
-*.png
 *.jpg
 *.jpeg
 
