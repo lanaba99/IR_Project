@@ -7,7 +7,7 @@ import os
 from services.retrieval_service.retrieval import RetrievalEngine
 
 # ============================================
-# إعدادات Sampling 
+# Sampling Settings 
 # ============================================
 SAMPLE_SIZE = 1000          # عدد الـ queries يلي رح تُختبر (من أصل 10,000)
 RANDOM_SEED = 42           # ثابت عشان النتيجة تتكرر لو شغلتي الكود مرة ثانية
@@ -31,7 +31,7 @@ def get_sampled_queries(qrels):
     queries_df = pd.read_csv("data/raw/test_queries.csv")
     queries_df["query_id"] = queries_df["query_id"].astype(str)
 
-    # فلترة: نخلي بس الأسئلة يلي إلها qrels
+    # we keep the queries that have qrels 
     queries_with_qrels = queries_df[queries_df["query_id"].isin(qrels.keys())]
 
     print(f"إجمالي test queries: {len(queries_df)}")
@@ -109,7 +109,7 @@ def run_full_evaluation():
     print("=" * 50)
     print(df.to_string(index=False))
 
-    # حفظ معلومات الـ sampling بالتقرير
+    # saving sampling info for reproducibility
     with open("data/evaluation/sampling_info.json", "w") as f:
         json.dump({
             "sample_size": SAMPLE_SIZE,
